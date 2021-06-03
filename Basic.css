@@ -1,0 +1,66 @@
+﻿html, body {
+    margin: 0px; /*margin为设置所有外边距的宽度，或者设置各边上外边距的宽度*/
+    padding: 0px; /*padding为设置所有内边距的宽度，或者设置各边上内边距的宽度*/
+}
+
+#header {
+    width: 1000px;
+    float: left;
+    margin: auto;
+    border: 1px solid #bbbbbb; /*border 简写属性在一个声明设置所有的边框属性*/
+}
+
+#logo {
+    width: 120px;
+    height: 150px;
+    float: left;
+    border: 1px solid #ccc;
+}
+
+#name {
+    width: 870px;
+    height: 150px;
+    margin: auto;
+    float: left;
+    text-align: center; /*text-align 属性规定元素中的文本的水平对齐方式*/
+    border: 1px solid #ccc;
+}
+
+.QR {
+    width: 170px;
+    height: 150px;
+    margin: auto;
+    float: right;
+    border: 1px solid #ccc;
+}
+
+#banner {
+    width: 1000px;
+    height: 30px;
+    float: left;
+    margin: 5px 0px;
+    text-align: center; /*text-align 属性规定元素中的文本的水平对齐方式*/
+    border: 1px solid #ccc;
+}
+
+#contect {
+    width: 1000px;
+    float: left;
+    margin: auto;
+    border: 1px solid #ccc;
+}
+
+#newsad {
+    width: 200px;
+    height: 500px;
+    margin: 5px;
+    float: left;
+    border: 1px solid #ccc;
+}
+
+#news {
+    width: 780px;
+    height: 880px;
+    margin: 5px;
+    border: 1px solid #ccc;
+}
