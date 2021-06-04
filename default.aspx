@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="default.aspx.vb" Inherits="JokePoint._default" %>
 
-<%@ Register Src="~/UserComtrols/Header.ascx" TagPrefix="uc1" TagName="Header" %>
-<%@ Register src="UserComtrols/DepartmentsList.ascx" tagname="DepartmentsList" tagprefix="uc2" %>
-<%@ Register Src="~/UserComtrols/DepartmentsList.ascx" TagPrefix="uc1" TagName="DepartmentsList" %>
+<%@ Register Src="~/UserControls/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+<%@ Register src="UserControls/DepartmentsList.ascx" tagname="DepartmentsList" tagprefix="uc2" %>
+<%@ Register Src="~/UserControls/DepartmentsList.ascx" TagPrefix="uc1" TagName="DepartmentsList" %>
 
 
 

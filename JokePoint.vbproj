@@ -76,8 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
-    <Content Include="UserComtrols\DepartmentsList.ascx" />
-    <Content Include="UserComtrols\Header.ascx" />
+    <Content Include="UserControls\DepartmentsList.ascx" />
+    <Content Include="UserControls\Header.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -108,17 +108,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UserComtrols\DepartmentsList.ascx.designer.vb">
+    <Compile Include="UserControls\DepartmentsList.ascx.designer.vb">
       <DependentUpon>DepartmentsList.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserComtrols\DepartmentsList.ascx.vb">
+    <Compile Include="UserControls\DepartmentsList.ascx.vb">
       <DependentUpon>DepartmentsList.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserComtrols\Header.ascx.designer.vb">
+    <Compile Include="UserControls\Header.ascx.designer.vb">
       <DependentUpon>Header.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserComtrols\Header.ascx.vb">
+    <Compile Include="UserControls\Header.ascx.vb">
       <DependentUpon>Header.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
