@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
+    <Content Include="UserControls\CategoriesList.ascx" />
     <Content Include="UserControls\DepartmentsList.ascx" />
     <Content Include="UserControls\Header.ascx" />
     <Content Include="Web.config" />
@@ -107,6 +108,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserControls\CategoriesList.ascx.designer.vb">
+      <DependentUpon>CategoriesList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CategoriesList.ascx.vb">
+      <DependentUpon>CategoriesList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControls\DepartmentsList.ascx.designer.vb">
       <DependentUpon>DepartmentsList.ascx</DependentUpon>

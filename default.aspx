@@ -6,6 +6,10 @@
 
 
 
+<%@ Register src="UserControls/CategoriesList.ascx" tagname="CategoriesList" tagprefix="uc3" %>
+
+
+
 <!DOCTYPE html>
 
 
@@ -19,6 +23,7 @@
 </head>
 
 <body>
+    <form id="form1" runat="server">
     <div id="header">
         <uc1:Header runat="server" id="Header1" />
         <div id="name">
@@ -35,11 +40,14 @@
         <div id="newsad">
             <uc1:DepartmentsList runat="server" id="DepartmentsList" />
 
+            <uc3:CategoriesList ID="CategoriesList1" runat="server" />
+
         </div>
         <div id="news">商品展示(图片+详细描述+购买链接)
             
         </div>
     </div>
+    </form>
 </body>
 
 </html>

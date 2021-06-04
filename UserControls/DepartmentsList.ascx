@@ -8,7 +8,7 @@
 
 	<ItemTemplate>
 		&nbsp;&raquo;
-		<asp:HyperLink id="HyperLink1" runat="server" NavigateUrl='<%# "../default.aspx?DepartmentID=" & DataBinder.Eval(Container.DataItem, "departmentID") & "DepartmentIndex=" & Container.ItemIndex  %>' Text='<%# DataBinder.Eval(Container.DataItem, "Name") %>' CssClass="DepartmentUnselected">
+		<asp:HyperLink id="HyperLink1" runat="server" NavigateUrl='<%# "../default.aspx?DepartmentID=" & DataBinder.Eval(Container.DataItem, "departmentID") & "&DepartmentIndex=" & Container.ItemIndex  %>' Text='<%# DataBinder.Eval(Container.DataItem, "Name") %>' CssClass="DepartmentUnselected">
 		</asp:HyperLink>
 	</ItemTemplate>
 
@@ -16,7 +16,7 @@
 
 	<SelectedItemTemplate>
 		&nbsp;&raquo; 
-		<asp:HyperLink id="HyperLink2" runat="server" NavigateUrl='<%# "../default.aspx?DepartmentID=" & DataBinder.Eval(Container.DataItem, "departmentID") & "DepartmentIndex=" & Container.ItemIndex %>' Text='<%# DataBinder.Eval(Container.DataItem, "Name") %>' CssClass="DepartmentSelected">
+		<asp:HyperLink id="HyperLink2" runat="server" NavigateUrl='<%# "../default.aspx?DepartmentID=" & DataBinder.Eval(Container.DataItem, "departmentID") & "&DepartmentIndex=" & Container.ItemIndex %>' Text='<%# DataBinder.Eval(Container.DataItem, "Name") %>' CssClass="DepartmentSelected">
 		</asp:HyperLink>
 	</SelectedItemTemplate>
 
