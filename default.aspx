@@ -45,7 +45,10 @@
 
         </div>
         <div id="news">
-            <uc1:Catalog runat="server" ID="Catalog" />
+            <tr>
+				<td id="pageContentsCell" runat="server">
+				</td>
+			</tr>
         </div>
     </div>
     </form>
