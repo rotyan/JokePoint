@@ -3,18 +3,15 @@
 <%@ Register Src="~/UserControls/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 <%@ Register src="UserControls/DepartmentsList.ascx" tagname="DepartmentsList" tagprefix="uc2" %>
 <%@ Register Src="~/UserControls/DepartmentsList.ascx" TagPrefix="uc1" TagName="DepartmentsList" %>
-
-
-
 <%@ Register src="UserControls/CategoriesList.ascx" tagname="CategoriesList" tagprefix="uc3" %>
+<%@ Register Src="~/UserControls/Catalog.ascx" TagPrefix="uc1" TagName="Catalog" %>
+<%@ Register Src="~/UserControls/FirstPage.ascx" TagPrefix="uc1" TagName="FirstPage" %>
 
 
 
-<!DOCTYPE html>
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
 <html>
-
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Joker</title>
@@ -35,6 +32,10 @@
     <div id="banner" class="auto-style1">
        
 
+        <asp:TextBox ID="TextBox1" runat="server">（请输入商品名称）</asp:TextBox>
+        <asp:Button ID="Button1" runat="server" Text="搜索" />
+       
+
     </div>
     <div id="contect">
         <div id="newsad">
@@ -43,8 +44,8 @@
             <uc3:CategoriesList ID="CategoriesList1" runat="server" />
 
         </div>
-        <div id="news">商品展示(图片+详细描述+购买链接)
-            
+        <div id="news">
+            <uc1:Catalog runat="server" ID="Catalog" />
         </div>
     </div>
     </form>

@@ -32,6 +32,24 @@ Partial Public Class _default
     Protected WithEvents Header1 As Global.JokePoint.Header
 
     '''<summary>
+    '''TextBox1 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Button1 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''DepartmentsList 控件。
     '''</summary>
     '''<remarks>
@@ -48,4 +66,13 @@ Partial Public Class _default
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
     Protected WithEvents CategoriesList1 As Global.JokePoint.CategoriesList
+
+    '''<summary>
+    '''Catalog 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents Catalog As Global.JokePoint.Catalog1
 End Class

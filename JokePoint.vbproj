@@ -76,9 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
+    <Content Include="UserControls\Catalog.ascx" />
     <Content Include="UserControls\CategoriesList.ascx" />
     <Content Include="UserControls\DepartmentsList.ascx" />
+    <Content Include="UserControls\FirstPage.ascx" />
     <Content Include="UserControls\Header.ascx" />
+    <Content Include="UserControls\ProductsList.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +112,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UserControls\Catalog.ascx.designer.vb">
+      <DependentUpon>Catalog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Catalog.ascx.vb">
+      <DependentUpon>Catalog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="UserControls\CategoriesList.ascx.designer.vb">
       <DependentUpon>CategoriesList.ascx</DependentUpon>
     </Compile>
@@ -123,11 +133,25 @@
       <DependentUpon>DepartmentsList.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="UserControls\FirstPage.ascx.designer.vb">
+      <DependentUpon>FirstPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FirstPage.ascx.vb">
+      <DependentUpon>FirstPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="UserControls\Header.ascx.designer.vb">
       <DependentUpon>Header.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Header.ascx.vb">
       <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProductsList.ascx.designer.vb">
+      <DependentUpon>ProductsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProductsList.ascx.vb">
+      <DependentUpon>ProductsList.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
