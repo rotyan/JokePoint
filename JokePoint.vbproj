@@ -82,6 +82,8 @@
     <Content Include="UserControls\FirstPage.ascx" />
     <Content Include="UserControls\Header.ascx" />
     <Content Include="UserControls\ProductsList.ascx" />
+    <Content Include="UserControls\SearchBox.ascx" />
+    <Content Include="UserControls\SearchResults.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,7 +93,7 @@
     </Compile>
     <Compile Include="default.aspx.vb">
       <DependentUpon>default.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -152,6 +154,20 @@
     </Compile>
     <Compile Include="UserControls\ProductsList.ascx.vb">
       <DependentUpon>ProductsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SearchBox.ascx.designer.vb">
+      <DependentUpon>SearchBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchBox.ascx.vb">
+      <DependentUpon>SearchBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SearchResults.ascx.designer.vb">
+      <DependentUpon>SearchResults.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchResults.ascx.vb">
+      <DependentUpon>SearchResults.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>

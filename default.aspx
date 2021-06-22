@@ -1,12 +1,12 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="default.aspx.vb" Inherits="JokePoint._default" %>
 
+<%@ Register src="~/UserControls/SearchBox.ascx" tagname="SearchBox" tagprefix="uc4" %>
 <%@ Register Src="~/UserControls/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 <%@ Register src="UserControls/DepartmentsList.ascx" tagname="DepartmentsList" tagprefix="uc2" %>
 <%@ Register Src="~/UserControls/DepartmentsList.ascx" TagPrefix="uc1" TagName="DepartmentsList" %>
 <%@ Register src="UserControls/CategoriesList.ascx" tagname="CategoriesList" tagprefix="uc3" %>
 <%@ Register Src="~/UserControls/Catalog.ascx" TagPrefix="uc1" TagName="Catalog" %>
 <%@ Register Src="~/UserControls/FirstPage.ascx" TagPrefix="uc1" TagName="FirstPage" %>
-
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
@@ -29,11 +29,12 @@
     </div>
     <div class="QR">
             <img src="img/qr.jpg"style="width: 140px ;height: 140px" alt="QR"/></div>
-    <div id="banner" class="auto-style1">
+    <div id="banner">
        
-
-        <asp:TextBox ID="TextBox1" runat="server">（请输入商品名称）</asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="搜索" />
+       
+        <center>
+        <uc4:SearchBox ID="SearchBox1" runat="server" algun="center"/>
+        </center>
        
 
     </div>
@@ -42,7 +43,6 @@
             <uc1:DepartmentsList runat="server" id="DepartmentsList" />
 
             <uc3:CategoriesList ID="CategoriesList1" runat="server" />
-
         </div>
         <div id="news">
             <tr>

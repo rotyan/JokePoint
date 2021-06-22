@@ -165,6 +165,111 @@ Public Class Catalog
         End Try
     End Function
 
+    Public Shared Function SearchCatalog(ByVal searchString As String, _
+                   ByVal pageNumber As String, _
+                   ByVal productsOnPage As String, _
+                   ByVal allWords As String) _
+                   As Integer
+        ' Create the connection object
+        Dim connection As New SqlConnection(connectionString)
+
+        ' Create and initialize the command object
+        Dim command As New SqlCommand("SearchCatalog", connection)
+        command.CommandType = CommandType.StoredProcedure
+
+        ' Add the @AllWords parameter
+        ' Guard against bogus values here - if you receive anything
+        ' different than "TRUE" assume it's "FALSE"
+        If allWords.ToUpper = "TRUE" Then
+            ' only do an "all words" search
+            command.Parameters.Add("@AllWords", SqlDbType.Bit)
+            command.Parameters("@AllWords").Value = 1
+        Else
+            ' only do an "any words" search
+            command.Parameters.Add("@AllWords", SqlDbType.Bit)
+            command.Parameters("@AllWords").Value = 0
+        End If
+
+        ' Add the @PageNumber parameter
+        command.Parameters.Add("@PageNumber", SqlDbType.TinyInt)
+        command.Parameters("@PageNumber").Value = pageNumber
+
+        ' Add the @ProductsOnPage parameter
+        command.Parameters.Add("@ProductsOnPage", SqlDbType.TinyInt)
+        command.Parameters("@ProductsOnPage").Value = productsOnPage
+
+        ' Add the @HowManyResults output parameter
+        command.Parameters.Add("@HowManyResults", SqlDbType.SmallInt)
+        command.Parameters("@HowManyResults").Direction = ParameterDirection.Output
+
+        ' Eliminate separation characters
+        searchString = searchString.Replace(",", " ")
+        searchString = searchString.Replace(";", " ")
+        searchString = searchString.Replace(".", " ")
+        searchString = searchString.Replace("!", " ")
+        searchString = searchString.Replace("?", " ")
+        searchString = searchString.Replace("-", " ")
+
+        ' Create an array that contains the words
+        Dim words() As String = Split(searchString, " ")
+        ' wordsCount contains the total number of words in the array
+        Dim wordsCount As Integer = words.Length
+        ' index is used to parse the list of words
+        Dim index As Integer = 0
+        ' this will store the total number of added words 
+        Dim addedWords As Integer = 0
+
+        ' Allow a maximum of five words
+        While addedWords < 5 And index < wordsCount
+            ' Add the @WordN parameters here
+            ' Only add words having more than two letters
+            If Len(words(index)) > 2 Then
+                addedWords += 1
+                ' Add an input parameter and supply a value for it
+                command.Parameters.Add("@Word" + addedWords.ToString, words(index))
+            End If
+            index += 1
+        End While
+
+        ' Time to execute the command
+        Try
+            ' Open the connection
+            connection.Open()
+            ' Create and initialize an SqlDataReader object
+            Dim reader As SqlDataReader
+            reader = command.ExecuteReader(CommandBehavior.CloseConnection)
+            ' Store the search results to a DataTable
+            Dim table As New DataTable
+            ' Copy column information from the SqlDataReader to the DataTable
+            Dim fieldCount As Integer = reader.FieldCount
+            Dim fieldIndex As Integer
+            For fieldIndex = 0 To fieldCount - 1
+                table.Columns.Add(reader.GetName(fieldIndex), reader.GetFieldType(fieldIndex))
+            Next
+            ' Copy data from the SqlDataReader to the DataTable
+            Dim row As DataRow
+            While reader.Read()
+                row = table.NewRow()
+                For fieldIndex = 0 To fieldCount - 1
+                    row(fieldIndex) = reader(fieldIndex)
+                Next
+                table.Rows.Add(row)
+            End While
+            ' Close the reader and return the number of results
+            reader.Close()
+
+            ' Save the search results to the current session
+            HttpContext.Current.Session("SearchTable") = table
+
+            ' return the total number of matching products
+            Return command.Parameters("@HowManyResults").Value
+        Catch e As Exception
+            ' Close the connection and throw the exception
+            connection.Close()
+            Throw e
+        End Try
+    End Function
+
 
 
     Private Shared ReadOnly Property connectionString() As String

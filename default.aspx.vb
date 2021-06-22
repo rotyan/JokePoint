@@ -23,13 +23,23 @@
 
     Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ' Save DepartmentID from the query string to a variable
-        Dim departmentId As String = Request.QueryString("DepartmentID")
-        ' Are we on the main web page or browsing the catalog?
-        If Not departmentId Is Nothing Then
+        Dim departmentId As String = Request.QueryString("departmentID")
+        ' Save the search string from the query string to a variable
+        Dim searchString As String = Request.QueryString("Search")
+
+        ' Are you on the main web page or browsing the catalog?
+        If Not searchString Is Nothing Then
+            ' you're searching the catalog 
+            Dim control As Control
+            control = Page.LoadControl("UserControls/SearchResults.ascx")
+            pageContentsCell.Controls.Add(control)
+        ElseIf Not departmentId Is Nothing Then
+            ' you're visiting a department or category
             Dim control As Control
             control = Page.LoadControl("UserControls/Catalog.ascx")
             pageContentsCell.Controls.Add(control)
         Else
+            ' you're on the main page
             Dim control As Control
             control = Page.LoadControl("UserControls/FirstPage.ascx")
             pageContentsCell.Controls.Add(control)

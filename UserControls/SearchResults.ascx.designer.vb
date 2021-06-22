@@ -11,50 +11,50 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class _default
+Partial Public Class SearchResults
 
     '''<summary>
-    '''form1 控件。
+    '''titleLabel 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents titleLabel As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Header1 控件。
+    '''pageNumberLabel 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents Header1 As Global.JokePoint.Header
+    Protected WithEvents pageNumberLabel As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''SearchBox1 控件。
+    '''previousLink 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents SearchBox1 As Global.JokePoint.SearchBox
+    Protected WithEvents previousLink As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
-    '''DepartmentsList 控件。
+    '''nextLink 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents DepartmentsList As Global.JokePoint.DepartmentsList
+    Protected WithEvents nextLink As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
-    '''CategoriesList1 控件。
+    '''ProductsList1 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents CategoriesList1 As Global.JokePoint.CategoriesList
+    Protected WithEvents ProductsList1 As Global.JokePoint.ProductsList
 End Class

@@ -93,3 +93,15 @@ A.CategoryUnselected {
     font-weight: bold;
     font-size: 11px;
 }
+
+.SearchBox {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    color: Black;
+}
+
+.SearchResults {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    color: Black;
+}

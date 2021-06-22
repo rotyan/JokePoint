@@ -27,9 +27,15 @@
         Dim departmentId As String = Request.QueryString("DepartmentID")
         ' Retrieve CategoryID from the query string
         Dim categoryId As String = Request.QueryString("CategoryID")
-        ' Are we retrieving products for a Category, for a Department
-        ' or for the main page?
-        If Not categoryId Is Nothing Then
+        ' Retrieve the SearchString from the query string
+        Dim searchString As String = Request.QueryString("Search")
+
+        If Not searchString Is Nothing Then
+            ' search results
+            list.DataSource = Session("SearchTable")
+            list.DataBind()
+            Session.Remove("SearchTable")
+        ElseIf Not categoryId Is Nothing Then
             ' category
             list.DataSource = Catalog.GetProductsInCategory(categoryId)
             list.DataBind()
