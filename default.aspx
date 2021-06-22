@@ -41,7 +41,6 @@
     <div id="contect">
         <div id="newsad">
             <uc1:DepartmentsList runat="server" id="DepartmentsList" />
-
             <uc3:CategoriesList ID="CategoriesList1" runat="server" />
         </div>
         <div id="news">
