@@ -11,59 +11,77 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class _default
+Partial Public Class CustomerLogin
 
     '''<summary>
-    '''form1 控件。
+    '''Form1 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents Form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Header1 控件。
+    '''Label1 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents Header1 As Global.JokePoint.Header
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''SearchBox1 控件。
+    '''txtEmail 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents SearchBox1 As Global.JokePoint.SearchBox
+    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''DepartmentsList 控件。
+    '''Label2 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents DepartmentsList As Global.JokePoint.DepartmentsList
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''CategoriesList1 控件。
+    '''txtPassword 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents CategoriesList1 As Global.JokePoint.CategoriesList
+    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''viewCartButton 控件。
+    '''btnLogin 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents viewCartButton As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''lblLoginMsg 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents lblLoginMsg As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''btnRegister 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents btnRegister As Global.System.Web.UI.WebControls.Button
 End Class

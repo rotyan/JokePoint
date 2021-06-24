@@ -50,4 +50,11 @@
         End If
     End Sub
 
+    Private Sub list_ItemCommand(ByVal source As Object, ByVal e As System.Web.UI.WebControls.DataListCommandEventArgs) Handles list.ItemCommand
+        ' The CommandArgument of the Button that was clicked
+        ' in the DataList contains the ProductID 
+        Dim productId As String = e.CommandArgument
+        ' Add the product to the shopping cart
+        ShoppingCart.AddProduct(productId)
+    End Sub
 End Class

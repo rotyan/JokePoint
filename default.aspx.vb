@@ -8,6 +8,7 @@
 
     End Sub
     Protected WithEvents pageContentsCell As System.Web.UI.HtmlControls.HtmlTableCell
+    'Protected WithEvents viewCartButton As System.Web.UI.WebControls.Button
 
     'NOTE: The following placeholder declaration is required by the Web Form Designer.
     'Do not delete or move it.
@@ -26,9 +27,15 @@
         Dim departmentId As String = Request.QueryString("departmentID")
         ' Save the search string from the query string to a variable
         Dim searchString As String = Request.QueryString("Search")
-
-        ' Are you on the main web page or browsing the catalog?
-        If Not searchString Is Nothing Then
+        ' We need to find out if the ViewCart parameter has been supplied
+        Dim viewCart As String = Request.QueryString("ViewCart")
+        ' Load page contents
+        If Not viewCart Is Nothing Then
+            ' we display the shopping cart
+            Dim control As Control
+            control = Page.LoadControl("UserControls/ShoppingCart.ascx")
+            pageContentsCell.Controls.Add(control)
+        ElseIf Not searchString Is Nothing Then
             ' you're searching the catalog 
             Dim control As Control
             control = Page.LoadControl("UserControls/SearchResults.ascx")
@@ -46,4 +53,11 @@
         End If
     End Sub
 
+    Private Sub viewCartButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles viewCartButton.Click
+        ' Get the query string as a NameValueCollection object
+        If Request.QueryString("ViewCart") Is Nothing Then
+            Response.Redirect("default.aspx?ViewCart=1&" &
+              Request.QueryString.ToString())
+        End If
+    End Sub
 End Class

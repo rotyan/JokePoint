@@ -42,6 +42,9 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SecurityLib">
+      <HintPath>..\SecurityLibTester\bin\SecurityLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -75,7 +78,17 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminUserControls\Logout.ascx" />
+    <Content Include="AdminUserControls\OrderDetailsAdmin.ascx" />
+    <Content Include="AdminUserControls\OrdersAdmin.ascx" />
+    <Content Include="Checkout.aspx" />
+    <Content Include="CustomerAddress.aspx" />
+    <Content Include="CustomerCreditCard.aspx" />
+    <Content Include="CustomerEdit.aspx" />
+    <Content Include="CustomerLogin.aspx" />
+    <Content Include="CustomerNew.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="shoppingCartAdmin.aspx" />
     <Content Include="UserControls\Catalog.ascx" />
     <Content Include="UserControls\CategoriesList.ascx" />
     <Content Include="UserControls\DepartmentsList.ascx" />
@@ -84,10 +97,77 @@
     <Content Include="UserControls\ProductsList.ascx" />
     <Content Include="UserControls\SearchBox.ascx" />
     <Content Include="UserControls\SearchResults.ascx" />
+    <Content Include="UserControls\ShoppingCart.ascx" />
     <Content Include="Web.config" />
+    <Content Include="ordersAdmin.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminUserControls\Logout.ascx.designer.vb">
+      <DependentUpon>Logout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControls\Logout.ascx.vb">
+      <DependentUpon>Logout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUserControls\OrderDetailsAdmin.ascx.designer.vb">
+      <DependentUpon>OrderDetailsAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControls\OrderDetailsAdmin.ascx.vb">
+      <DependentUpon>OrderDetailsAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUserControls\OrdersAdmin.ascx.designer.vb">
+      <DependentUpon>OrdersAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControls\OrdersAdmin.ascx.vb">
+      <DependentUpon>OrdersAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="BusinessObjects\Catalog.vb" />
+    <Compile Include="BusinessObjects\OrderManager.vb" />
+    <Compile Include="BusinessObjects\ShoppingCart.vb" />
+    <Compile Include="Checkout.aspx.designer.vb">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.aspx.vb">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomerAddress.aspx.designer.vb">
+      <DependentUpon>CustomerAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAddress.aspx.vb">
+      <DependentUpon>CustomerAddress.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomerCreditCard.aspx.designer.vb">
+      <DependentUpon>CustomerCreditCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerCreditCard.aspx.vb">
+      <DependentUpon>CustomerCreditCard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomerEdit.aspx.designer.vb">
+      <DependentUpon>CustomerEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerEdit.aspx.vb">
+      <DependentUpon>CustomerEdit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomerLogin.aspx.designer.vb">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerLogin.aspx.vb">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomerNew.aspx.designer.vb">
+      <DependentUpon>CustomerNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerNew.aspx.vb">
+      <DependentUpon>CustomerNew.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="default.aspx.designer.vb">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
@@ -113,6 +193,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="shoppingCartAdmin.aspx.designer.vb">
+      <DependentUpon>shoppingCartAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shoppingCartAdmin.aspx.vb">
+      <DependentUpon>shoppingCartAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="UserControls\Catalog.ascx.designer.vb">
       <DependentUpon>Catalog.ascx</DependentUpon>
@@ -169,6 +256,20 @@
     <Compile Include="UserControls\SearchResults.ascx.vb">
       <DependentUpon>SearchResults.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ShoppingCart.ascx.designer.vb">
+      <DependentUpon>ShoppingCart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ShoppingCart.ascx.vb">
+      <DependentUpon>ShoppingCart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ordersAdmin.aspx.designer.vb">
+      <DependentUpon>ordersAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ordersAdmin.aspx.vb">
+      <DependentUpon>ordersAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

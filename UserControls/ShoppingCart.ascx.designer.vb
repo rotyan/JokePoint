@@ -11,59 +11,77 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class _default
+Partial Public Class ShoppingCart1
 
     '''<summary>
-    '''form1 控件。
+    '''introLabel 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents introLabel As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Header1 控件。
+    '''grid 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents Header1 As Global.JokePoint.Header
+    Protected WithEvents grid As Global.System.Web.UI.WebControls.DataGrid
 
     '''<summary>
-    '''SearchBox1 控件。
+    '''Label2 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents SearchBox1 As Global.JokePoint.SearchBox
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''DepartmentsList 控件。
+    '''totalAmountLabel 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents DepartmentsList As Global.JokePoint.DepartmentsList
+    Protected WithEvents totalAmountLabel As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''CategoriesList1 控件。
+    '''placeOrderButton 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents CategoriesList1 As Global.JokePoint.CategoriesList
+    Protected WithEvents placeOrderButton As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''viewCartButton 控件。
+    '''continueShoppingButton 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents viewCartButton As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents continueShoppingButton As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''similarProductsLabel 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents similarProductsLabel As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''ProductsList1 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents ProductsList1 As Global.JokePoint.ProductsList
 End Class

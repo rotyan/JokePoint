@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" Codebehind="ProductsList.ascx.vb" Inherits="JokePoint.ProductsList" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
-<asp:datalist id="list" RepeatColumns="2" runat="server" RepeatDirection="Horizontal">
+<asp:datalist id="list" EnableViewState="False" RepeatDirection="Horizontal" runat="server" RepeatColumns="2">
 	<ItemTemplate>
 		<table cellPadding="0" align="left">
 			<tr>
@@ -18,7 +18,11 @@
 						<br>
 						Price: </font><font class="ProductPrice">
 						<%# DataBinder.Eval(Container.DataItem, "Price", "{0:c}") %>
-					</font>
+						<br>
+						<br>
+<asp:Button runat="server" Text="Add to Cart" 
+     CommandArgument='<%# DataBinder.Eval(Container.DataItem, "ProductID") %>' ID="Button1" NAME="Button1">
+</asp:Button>
 			</tr>
 		</table>
 	</ItemTemplate>

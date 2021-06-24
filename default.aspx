@@ -7,6 +7,8 @@
 <%@ Register src="UserControls/CategoriesList.ascx" tagname="CategoriesList" tagprefix="uc3" %>
 <%@ Register Src="~/UserControls/Catalog.ascx" TagPrefix="uc1" TagName="Catalog" %>
 <%@ Register Src="~/UserControls/FirstPage.ascx" TagPrefix="uc1" TagName="FirstPage" %>
+<%@ Register Src="~/UserControls/ShoppingCart.ascx" TagPrefix="uc1" TagName="ShoppingCart" %>
+
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
@@ -31,17 +33,19 @@
             <img src="img/qr.jpg"style="width: 140px ;height: 140px" alt="QR"/></div>
     <div id="banner">
        
-       
         <center>
         <uc4:SearchBox ID="SearchBox1" runat="server" algun="center"/>
         </center>
        
-
     </div>
     <div id="contect">
         <div id="newsad">
             <uc1:DepartmentsList runat="server" id="DepartmentsList" />
             <uc3:CategoriesList ID="CategoriesList1" runat="server" />
+            <br />
+            <center>
+        <asp:Button id="viewCartButton" runat="server" Text="View Cart"></asp:Button>
+            </center>
         </div>
         <div id="news">
             <tr>
